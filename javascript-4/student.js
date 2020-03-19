@@ -57,7 +57,15 @@ let homeTown = me.homeTown;
 
 // CODE HERE
 function setColor(arr){
-
+    if(arr > 3){
+        arr.splice(3, 1)
+    }
+    for(let i = 0; i <= arr.length; i++){
+        if(arr[i] === 'blue'){
+            return '4D4DFF'
+        }
+    }
+    background(arr)
 }
 //////////////////Step 5////////////////////
 //Create a function called 'setPowers' that takes in 'arr' as a parameter. In your setPowers function, loop over the 
@@ -67,7 +75,9 @@ function setColor(arr){
 
 // CODE HERE
 function setPowers(arr){
-    
+    for(let i = 0; i < arr.length; i++){
+        createLi()
+    }
 }
 
 //////////////////Step 6////////////////////
@@ -78,3 +88,9 @@ function setPowers(arr){
 // the text on the screen.
 
 // CODE HERE
+function redactInfo(obj){
+    for(let i = 0; i < obj.length; i++){
+        return 'redacted'
+    }
+    redacted()
+}
